@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "checkJs": false,
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "ScriptHost"]
+  }
+}
