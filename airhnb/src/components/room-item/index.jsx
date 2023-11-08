@@ -7,8 +7,9 @@ const RoomItem = memo((props) => {
   // console.log(props);
   return (
     <RoomItemWrapper
-      text_color={props.info?.bottom_info?.content_color}
-      fz={props.info?.bottom_info?.font_size}
+      color={props.info?.bottom_info?.content_color}
+      fontSize={props.info?.bottom_info?.font_size}
+      width={props.item_width}
     >
       <div className="cover">
         <img className="coverImg" src={props.info?.picture_url} alt="" />
@@ -35,6 +36,7 @@ const RoomItem = memo((props) => {
 
 RoomItem.propTypes = {
   info: PropTypes.object,
+  item_width: PropTypes.string,
 };
 
 export default RoomItem;

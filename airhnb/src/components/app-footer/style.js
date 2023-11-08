@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const FooterWrapper = styled.div`
   display: flex;
   justify-content: center;
-
-  padding: 0 60px;
+  border-top: 1px solid #d5d5d5;
+  padding: 12px 60px;
+  margin-top: 26px;
   text-align: ${(props) => props.theme.footer.textAlgin};
   .left {
     flex: 1;

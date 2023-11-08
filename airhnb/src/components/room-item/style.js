@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const RoomItemWrapper = styled.div`
-  width: 25%;
+  width: ${(props) => props.width};
   padding: 18px 8px;
+  flex-shrink: 0;
   .cover {
     height: 50%;
     padding: 60% 0 0;
@@ -35,8 +36,8 @@ export const RoomItemWrapper = styled.div`
       margin-bottom: 12px;
     }
     .rate {
-      color: ${(props) => props.text_color};
-      font-size: ${(props) => props.fz}px;
+      color: ${(props) => props.color};
+      font-size: ${(props) => props.fontSize}px;
     }
   }
 `;
