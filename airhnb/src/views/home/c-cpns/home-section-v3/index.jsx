@@ -11,7 +11,7 @@ function HomeSectionV3(props) {
       <SectionHeader title={props.info?.title} />
       <ScrollView>
         {props.info?.list?.map((item) => {
-          return <RoomItem info={item} item_width={item_width} />;
+          return <RoomItem key={item.id} info={item} item_width={item_width} />;
         })}
       </ScrollView>
     </div>
