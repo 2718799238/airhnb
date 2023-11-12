@@ -8,7 +8,9 @@ function EntireRooms(props) {
   // 跳转到详情页
   const id = 4444;
   const Navigate = useNavigate();
-  function handleClick(id) {
+  function handleClick(event) {
+    // event.preventDefault();
+    console.log(id);
     Navigate(`/detail/${id}`);
   }
   return (

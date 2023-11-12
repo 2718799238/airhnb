@@ -11,7 +11,9 @@ const RoomItem = memo((props) => {
   // console.log(props);
   const [currentIndex, setIndex] = useState(0);
   const sliderRef = useRef();
-  function handleClick(isNext) {
+  function handleClick(event, isNext) {
+    // console.log("滑动", event);
+    event.stopPropagation();
     const index = currentIndex;
     if (isNext) {
       sliderRef.current.next();
@@ -26,7 +28,9 @@ const RoomItem = memo((props) => {
   }
 
   // 监听item点击
-  function handleItemClick() {
+  function handleItemClick(event) {
+    // console.log("item", event);
+    event.stopPropagation();
     if (itemClick) itemClick();
   }
   return (
@@ -34,18 +38,21 @@ const RoomItem = memo((props) => {
       color={props.info?.bottom_info?.content_color}
       fontSize={props.info?.bottom_info?.font_size}
       width={props.item_width}
-      onClick={(e) => {
-        // e.stopPropagation();
-        handleItemClick();
-      }}
+      onClick={(event) => handleItemClick(event)}
     >
       {isSipper ? (
         <div className="cover-list">
           <div className="control">
-            <div className="left" onClick={(e) => handleClick(false)}>
+            <div
+              className="left"
+              onClick={(event) => handleClick(event, false)}
+            >
               <IconLeft size={{ width: "32px", height: "32px" }} />
             </div>
-            <div className="right" onClick={(e) => handleClick(true)}>
+            <div
+              className="right"
+              onClick={(event) => handleClick(event, true)}
+            >
               <IconRight size={{ width: "32px", height: "32px" }} />
             </div>
           </div>

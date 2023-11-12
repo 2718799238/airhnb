@@ -34,19 +34,17 @@ function Indicator(props) {
   return (
     <IndicatorWrapper>
       <div className="content" ref={contentRef}>
-        {item_list.map((item, index) => {
-          return (
-            <div key={item} className="item">
-              {dot ? (
-                <span
-                  className={`dot ${selectedIndex === index ? "active" : ""}`}
-                />
-              ) : (
-                <span className="line" />
-              )}
-            </div>
-          );
-        })}
+        {dot
+          ? item_list.map((item, index) => {
+              return (
+                <div key={item} className="item">
+                  <span
+                    className={`dot ${selectedIndex === index ? "active" : ""}`}
+                  />
+                </div>
+              );
+            })
+          : props.children}
       </div>
     </IndicatorWrapper>
   );

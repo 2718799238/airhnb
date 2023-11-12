@@ -22,22 +22,38 @@ export const RoomItemWrapper = styled.div`
     position: relative;
     color: #fff;
     .control {
+      height: 100%;
       .left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 40px;
         position: absolute;
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
         z-index: 999;
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.05)
+        );
       }
       .right {
         position: absolute;
+        display: flex;
+        align-items: center;
+        height: 100%;
         top: 50%;
         right: 0;
         transform: translateY(-50%);
         width: 40px;
         z-index: 999;
+        background-image: linear-gradient(
+          to left,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.05)
+        );
       }
     }
     .indicator {

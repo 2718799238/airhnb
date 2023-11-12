@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 export const IndicatorWrapper = styled.div`
-  width: 85px;
   overflow: hidden;
   .content {
-    width: 85px;
-    height: 10px;
+    width: 100%;
+    height: 85px;
     display: flex;
     align-items: center;
     /* margin: 10px 10px; */
 
-    .item {
+    > * {
       display: flex;
       align-items: center;
       justify-content: center;

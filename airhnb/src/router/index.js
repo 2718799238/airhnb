@@ -19,7 +19,7 @@ const routes = [
     element: <Entire />,
   },
   {
-    path: "/detail",
+    path: "/detail/:id",
     element: <Detail />,
   },
   {
